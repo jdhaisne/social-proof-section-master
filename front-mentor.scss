@@ -1,0 +1,150 @@
+
+$very_dark_magenta: hsl(300, 43%, 22%);
+$soft_pink: hsl(333, 80%, 67%);
+
+$dark_grayish_magenta: hsl(303, 10%, 53%);
+$light_grayish_magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+}
+body {
+    background-color: grey;
+
+}
+
+.main-card {
+    background: url(../../images/bg-pattern-top-desktop.svg), url(../../images/bg-pattern-bottom-desktop.svg), white;
+    background-position: top left, bottom right;
+    background-repeat:  no-repeat, no-repeat;
+    background-size: auto 50%, auto 50%;
+    &__flex {
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 599px)
+        {
+            display: block;
+        }
+    } 
+    @media (max-width: 599px) {
+        background: url(../../images/bg-pattern-top-mobile.svg), url(../../images/bg-pattern-bottom-mobile.svg), white;
+        background-position: top left, bottom right;
+        background-repeat:  no-repeat, no-repeat;
+        background-size: auto 50%, auto 50%;
+        padding: 20px;
+    }
+}
+
+.compagny-summ {
+
+    &__heading {
+        color: $very_dark_magenta;
+        font-weight: 700;
+    }
+    &__summary {
+        color: $dark_grayish_magenta
+
+    }
+    @media (max-width: 599px) {
+        text-align: center;
+    }
+}
+
+
+.star-rating {
+
+    
+    div
+    {
+        background-color: $light_grayish_magenta;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 599px) {
+            display: block
+            
+        }
+    }
+    &__star {
+       @media (max-width: 599px) {
+           margin-left: auto;
+           margin-right: auto;
+           width: 165px;
+       }
+    }
+    &__text {
+        color: $very_dark_magenta;
+        font-weight: 700;
+        @media (max-width: 599px) {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+    img {
+        margin: 0px 5px;
+    }
+}
+
+.user-feed {
+    background-color: $very_dark_magenta;
+    border-radius: 5px;
+    padding: 20px;    
+    margin: 20px;
+    @media (max-width: 599px) {
+        margin-bottom: 20px;
+    }
+    @for $i from 1 through 3 {
+        &-#{$i} {
+            margin-top: 20px * $i;
+        }
+    }
+    margin-bottom: 20px;
+    img {
+        display: inline;
+        border-radius: 50%;
+    }
+    &__name {
+        font-weight: 500;
+        color: $white;
+    }
+    &__buyer {
+        font-weight: 500;
+        color: $soft_pink;
+    }
+    &__identity {
+        display: inline-block;
+    }
+    &__avis {
+        font-weight: 400;
+        color: $white;
+    }
+}
+
+@for $i from 1 through 3 {
+    .margin-offset-vert-#{$i} {
+        margin-top: 30px * $i;
+        margin-bottom: 90px - (30 * $i);
+        @media (max-width: 599px) {
+            margin-top: unset;
+            margin-bottom: initial;
+        }
+    }
+}
+
+@for $i from 1 through 3 {
+    .margin-offset-hor-#{$i} {
+        margin-left: 30px * $i;
+        margin-right: 90px - (30 * $i);
+        @media (max-width: 599px) {
+            margin-left: unset;
+            margin-right: unset;
+        }
+    }
+}
