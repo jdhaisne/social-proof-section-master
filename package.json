@@ -1,0 +1,19 @@
+{
+  "name": "social-proof-section-master",
+  "version": "1.0.0",
+  "description": "solution",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/front-mentor.scss:./css/front-mentor.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdhaisne/social-proof-section-master.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdhaisne/social-proof-section-master/issues"
+  },
+  "homepage": "https://github.com/jdhaisne/social-proof-section-master#readme"
+}

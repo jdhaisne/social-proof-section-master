@@ -18,13 +18,23 @@ body {
 }
 
 .main-card {
-    background: url(../../images/bg-pattern-top-desktop.svg), url(../../images/bg-pattern-bottom-desktop.svg), white;
+    background: url(../../../images/bg-pattern-top-desktop.svg), url(../../../images/bg-pattern-bottom-desktop.svg), white;
     background-position: top left, bottom right;
     background-repeat:  no-repeat, no-repeat;
     background-size: auto 50%, auto 50%;
+    padding: 45px 60px;
     &__flex {
         display: flex;
         justify-content: space-around;
+        @media (max-width: 599px)
+        {
+            display: block;
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 100%;
         @media (max-width: 599px)
         {
             display: block;
@@ -56,7 +66,6 @@ body {
 
 
 .star-rating {
-
     
     div
     {
@@ -109,17 +118,24 @@ body {
     img {
         display: inline;
         border-radius: 50%;
+        height: 100%;
     }
     &__name {
         font-weight: 500;
         color: $white;
+        margin: 0px;
     }
     &__buyer {
         font-weight: 500;
         color: $soft_pink;
+        margin: 0px;
     }
     &__identity {
+        height: 20%;
         display: inline-block;
+        div {
+            display: inline-block;
+        }
     }
     &__avis {
         font-weight: 400;
