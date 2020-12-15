@@ -11,6 +11,7 @@ html, body {
     margin: 0;
     box-sizing: border-box;
     font-family: "Spartan", sans-serif;
+    font-size: 15px;
 }
 body {
     background-color: grey;
@@ -18,34 +19,34 @@ body {
 }
 
 .main-card {
-    background: url(../../../images/bg-pattern-top-desktop.svg), url(../../../images/bg-pattern-bottom-desktop.svg), white;
+    background: url(./../images/bg-pattern-top-desktop.svg), url(./../images/bg-pattern-bottom-desktop.svg), white;
     background-position: top left, bottom right;
     background-repeat:  no-repeat, no-repeat;
-    background-size: auto 50%, auto 50%;
+    background-size: auto auto, auto auto;
     padding: 45px 60px;
     &__flex {
         display: flex;
         justify-content: space-around;
-        @media (max-width: 599px)
+        @media (max-width: 1300px)
         {
             display: block;
         }
     }
     &__grid {
         display: grid;
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
-        @media (max-width: 599px)
+        @media (max-width: 1300px)
         {
             display: block;
         }
     } 
-    @media (max-width: 599px) {
-        background: url(../../images/bg-pattern-top-mobile.svg), url(../../images/bg-pattern-bottom-mobile.svg), white;
+    @media (max-width: 1300px) {
+        background: url(./../images/bg-pattern-top-mobile.svg), url(./../images/bg-pattern-bottom-mobile.svg), white;
         background-position: top left, bottom right;
         background-repeat:  no-repeat, no-repeat;
-        background-size: auto 50%, auto 50%;
-        padding: 20px;
+        background-size: auto auto, auto auto;
+        padding: 60px 15px;
     }
 }
 
@@ -54,20 +55,33 @@ body {
     &__heading {
         color: $very_dark_magenta;
         font-weight: 700;
+        font-size: 5em;
+        @media (max-width: 1300px) {
+            font-size: 2em;
+            padding: 20px;
+        }
     }
     &__summary {
-        color: $dark_grayish_magenta
+        color: $dark_grayish_magenta;
+        font-weight: 400;
+        font-size: 2em;
+        @media (max-width: 1300px) {
+            font-size: 1em;
+        }
 
     }
-    @media (max-width: 599px) {
+    @media (max-width: 1300px) {
         text-align: center;
     }
 }
 
 
 .star-rating {
-    
-    div
+    margin-top: 120px;
+    @media (max-width: 1300px) {
+        margin-top: 20px;
+    }
+    &__card
     {
         background-color: $light_grayish_magenta;
         margin-bottom: 20px;
@@ -75,13 +89,14 @@ body {
         border-radius: 5px;
         display: flex;
         justify-content: space-around;
-        @media (max-width: 599px) {
+        align-items: center;
+        @media (max-width: 1300px) {
             display: block
             
         }
     }
     &__star {
-       @media (max-width: 599px) {
+       @media (max-width: 1300px) {
            margin-left: auto;
            margin-right: auto;
            width: 165px;
@@ -90,7 +105,7 @@ body {
     &__text {
         color: $very_dark_magenta;
         font-weight: 700;
-        @media (max-width: 599px) {
+        @media (max-width: 1300px) {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -106,12 +121,12 @@ body {
     border-radius: 5px;
     padding: 20px;    
     margin: 20px;
-    @media (max-width: 599px) {
+    @media (max-width: 1300px) {
         margin-bottom: 20px;
     }
     @for $i from 1 through 3 {
         &-#{$i} {
-            margin-top: 20px * $i;
+            margin-top: 5px * $i;
         }
     }
     margin-bottom: 20px;
@@ -145,20 +160,19 @@ body {
 
 @for $i from 1 through 3 {
     .margin-offset-vert-#{$i} {
-        margin-top: 30px * $i;
+        
+        @media (min-width: 1300px) {
+            margin-top: 30px * $i;
         margin-bottom: 90px - (30 * $i);
-        @media (max-width: 599px) {
-            margin-top: unset;
-            margin-bottom: initial;
         }
     }
 }
 
 @for $i from 1 through 3 {
     .margin-offset-hor-#{$i} {
-        margin-left: 30px * $i;
-        margin-right: 90px - (30 * $i);
-        @media (max-width: 599px) {
+        margin-left: 60px * $i;
+        margin-right: 180px - (60 * $i);
+        @media (max-width: 1300px) {
             margin-left: unset;
             margin-right: unset;
         }
