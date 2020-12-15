@@ -19,7 +19,7 @@ body {
 }
 
 .main-card {
-    background: url(../../../images/bg-pattern-top-desktop.svg), url(../../../images/bg-pattern-bottom-desktop.svg), white;
+    background: url(./../images/bg-pattern-top-desktop.svg), url(./../images/bg-pattern-bottom-desktop.svg), white;
     background-position: top left, bottom right;
     background-repeat:  no-repeat, no-repeat;
     background-size: auto auto, auto auto;
@@ -27,7 +27,7 @@ body {
     &__flex {
         display: flex;
         justify-content: space-around;
-        @media (max-width: 599px)
+        @media (max-width: 1300px)
         {
             display: block;
         }
@@ -36,13 +36,13 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
-        @media (max-width: 599px)
+        @media (max-width: 1300px)
         {
             display: block;
         }
     } 
-    @media (max-width: 599px) {
-        background: url(../../../images/bg-pattern-top-mobile.svg), url(../../../images/bg-pattern-bottom-mobile.svg), white;
+    @media (max-width: 1300px) {
+        background: url(./../images/bg-pattern-top-mobile.svg), url(./../images/bg-pattern-bottom-mobile.svg), white;
         background-position: top left, bottom right;
         background-repeat:  no-repeat, no-repeat;
         background-size: auto auto, auto auto;
@@ -56,7 +56,7 @@ body {
         color: $very_dark_magenta;
         font-weight: 700;
         font-size: 5em;
-        @media (max-width: 599px) {
+        @media (max-width: 1300px) {
             font-size: 2em;
             padding: 20px;
         }
@@ -65,12 +65,12 @@ body {
         color: $dark_grayish_magenta;
         font-weight: 400;
         font-size: 2em;
-        @media (max-width: 599px) {
+        @media (max-width: 1300px) {
             font-size: 1em;
         }
 
     }
-    @media (max-width: 599px) {
+    @media (max-width: 1300px) {
         text-align: center;
     }
 }
@@ -78,7 +78,7 @@ body {
 
 .star-rating {
     margin-top: 120px;
-    @media (max-width: 599px) {
+    @media (max-width: 1300px) {
         margin-top: 20px;
     }
     &__card
@@ -90,13 +90,13 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        @media (max-width: 599px) {
+        @media (max-width: 1300px) {
             display: block
             
         }
     }
     &__star {
-       @media (max-width: 599px) {
+       @media (max-width: 1300px) {
            margin-left: auto;
            margin-right: auto;
            width: 165px;
@@ -105,7 +105,7 @@ body {
     &__text {
         color: $very_dark_magenta;
         font-weight: 700;
-        @media (max-width: 599px) {
+        @media (max-width: 1300px) {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -121,7 +121,7 @@ body {
     border-radius: 5px;
     padding: 20px;    
     margin: 20px;
-    @media (max-width: 599px) {
+    @media (max-width: 1300px) {
         margin-bottom: 20px;
     }
     @for $i from 1 through 3 {
@@ -161,7 +161,7 @@ body {
 @for $i from 1 through 3 {
     .margin-offset-vert-#{$i} {
         
-        @media (min-width: 600px) {
+        @media (min-width: 1300px) {
             margin-top: 30px * $i;
         margin-bottom: 90px - (30 * $i);
         }
@@ -172,7 +172,7 @@ body {
     .margin-offset-hor-#{$i} {
         margin-left: 60px * $i;
         margin-right: 180px - (60 * $i);
-        @media (max-width: 599px) {
+        @media (max-width: 1300px) {
             margin-left: unset;
             margin-right: unset;
         }
