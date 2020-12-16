@@ -1,2 +1,2 @@
 # social-proof-section-master
-solution for frontendmentor challenge
+Solution for the Social proof section challenge at frontend mentor https://social-proof-section-master-lilac.vercel.app/
